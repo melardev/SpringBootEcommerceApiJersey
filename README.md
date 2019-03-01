@@ -1,7 +1,3 @@
-https://stackoverflow.com/questions/51235724/how-to-save-object-to-reactive-repository-inside-flux
-https://stackoverflow.com/questions/44431870/how-can-i-add-in-reactive-java-a-new-object-to-an-existing-stream
-https://www.codingame.com/playgrounds/929/reactive-programming-with-reactor-3/Flux
-
 # Introduction
 This is one of my E-commerce API app implementations. It is written in Java using Spring Boot, Hibernate and Jersey as the main dependencies.
 This is not a finished project by any means, but it has a valid enough shape to be git cloned and studied if you are interested in this topic.
