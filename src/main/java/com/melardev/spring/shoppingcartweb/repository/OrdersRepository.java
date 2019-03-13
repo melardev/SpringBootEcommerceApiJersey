@@ -18,6 +18,9 @@ public interface OrdersRepository extends JpaRepository<Order, Long> {
     @Query("Select o from Order o where o.user.id = :id")
     Page<Order> findOrdersByUserId(@Param("id") Long id, Pageable pageRequest);
 
+    @Query("Select o from Order o where o.user.id = ?1")
+    List<Order> findOrdersByUserId(Long id);
+
     @Query("Select o from Order o left join fetch o.orderItems oi join fetch o.address a where o.id = :id")
     Optional<Order> findByIdWithDetails(Long id);
 
@@ -26,7 +29,8 @@ public interface OrdersRepository extends JpaRepository<Order, Long> {
 
     // Used on tutorial on magic methods in my Spring Boot playlist
     List<Order> findAllByUserId(Long id);
-
+    List<Order> getAllByUserId(Long id); // also some really weird names
+    List<Order> findByUserId(Long id); // also some really weird names
     Page<Order> findAllByUserId(Long id, Pageable pageable);
 
     List<Order> findAllByUserUsername(String name);

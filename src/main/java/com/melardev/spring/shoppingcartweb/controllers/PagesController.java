@@ -14,7 +14,7 @@ import java.util.Collection;
 import java.util.Set;
 
 
-@RequestMapping("")
+@RequestMapping("/")
 @RestController
 public class PagesController {
 
@@ -29,7 +29,7 @@ public class PagesController {
         this.tagService = tagService;
     }
 
-    @GetMapping({"", "home"})
+    @GetMapping("home")
     public HomeDtoResponse home() {
         Set<Category> categories = categoriesService.fetchAll();
         Collection<Tag> tags = tagService.fetchAll();
